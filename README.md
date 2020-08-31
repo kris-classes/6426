@@ -4,5 +4,5 @@
 
 * Tommy: Sorting
 * Tauriq: Traveling Salesman Problem (TSP)
-* Lily: Trees (TBD)
+* Lily: Sudoku Solver
 * Ilya: TBD
