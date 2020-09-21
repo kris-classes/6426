@@ -116,7 +116,6 @@ if __name__ == "__main__":
         'Taupo': 155,
         'Tauranga': 114,
         'Palmerston North': 394,
-        'Wellington': 520,
     })
     north_island.add_vertex('Rotorua', {
         'Tauranga': 67,
