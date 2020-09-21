@@ -44,7 +44,6 @@ class Graph:
                     smallest_vertex = previous[smallest_vertex]
                 # Add the start and finish vertices.
                 path.insert(0, start)
-                path.append(finish)
                 print(f'Finished: {" -> ".join(path)}. Total distance: {smallest[0]}')
                 return path
 
