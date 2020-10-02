@@ -7,3 +7,4 @@
 * Lily: Sudoku Solver
 * Ilya: Quadtree
 * Daniel H: Bellman-Ford
+* Daniel E: Dijkstra
