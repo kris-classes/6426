@@ -6,5 +6,6 @@
 * Tauriq: Traveling Salesman Problem (TSP)
 * Lily: Sudoku Solver
 * Ilya: Quadtree
+* Isaiah: Linked Lists
 * Daniel H: Bellman-Ford
 * Daniel E: Dijkstra
