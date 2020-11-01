@@ -67,8 +67,7 @@ The files you need to fix are:
 * ex6_set.py
 * ex7_priorityqueue.py
 
-Create copies of them and upload them to a private DSA_Labs repository you
-create. Add me (@krisrp) as a collaborator to the repository.
+Add these files to a Labs/Lab2 directory in your class repository.
 
 ``` shell
 pytest -xv ex2_stack_tests.py  # Runs the Stack tests.
