@@ -20,6 +20,16 @@ Tuple (Immutable Container):
     None of the method implementations require more than 6 lines of code.
 """
 
+class TupleException(Exception):
+    pass
+
+class TupleIndexException(TupleException):
+    pass
+
+class TupleModifyException(TupleException):
+    pass
+
+
 # IMPLEMENT a TupleException.
 
 
@@ -44,32 +54,42 @@ class Tuple:
     def __str__(self):
         # Print class name and contents of tuple
         # e.g. print(my_tuple) returns <Tuple __str__: [1, 2, 3]>
-        return f'tuple __str__(). Implement me.'
+        return f'<Tuple __str__: {self.data}>'
 
     def __repr__(self):
         # Display class name and contents of tuple
         # e.g. Typing my_tuple in shell displays <Tuple __repr__: [1, 2, 3]>
-        return f'tuple __repr__(). Implement me.'
+        return f'<Tuple __repr__: {self.data}>'
 
     def __getitem__(self, index):
         # Returns item at index 123 when we type my_tuple[123].
         # IMPLEMENT: Raise a TupleIndexException if accessing index that doesn't exist.
-        print('tuple __getitem__(). Implement me.')
+        if self.data[index] in self.data:
+            return self.data[index]
+        else:
+            raise TupleIndexException()
 
     def __setitem__(self, index, item):
         # Tuple's don't support item assignment.
         # IMPLEMENT: Immediately raise a TupleModifyException when trying to change an item.
-        print('tuple __setitem__(). Implement me.')
+        if index == item:
+            print(f'tuple __setitem__(). {self.data}.')
+        else:
+            raise TupleModifyException()
 
     def __add__(self, other):
         # Add two Tuples together and return a new Tuple.
-        print('tuple __add__(). Implement me.')
+        for i in self.data:
+            if i not in other:
+                self.data.append(i)
+        return self.data
 
     def count(self, value):
         # Return number of occurrences of value.
-        print('tuple count(). Implement me.')
+        if len(self.data) != 0:
+            return self.data.count(value)
+        print(f'tuple count(). {self.data}.')
 
     def index(self, value):
         # Return the index of value in self.data.
-        print('tuple index(). Implement me.')
-
+        return self.data[value-1]
